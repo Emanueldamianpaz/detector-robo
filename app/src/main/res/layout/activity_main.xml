@@ -10,19 +10,21 @@
         android:id="@+id/tv_steps"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center" />
+        android:gravity="center"
+        android:textSize="50sp" />
 
 
     <Button
         android:id="@+id/btn_start"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Start Pedometer" />
+        android:text="Empezar a medir" />
 
     <Button
         android:id="@+id/btn_stop"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Stop Pedometer" />
+        android:text="Parar de medir" />
+
 
 </LinearLayout>

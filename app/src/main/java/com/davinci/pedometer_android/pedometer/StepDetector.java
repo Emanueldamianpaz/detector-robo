@@ -1,38 +1,39 @@
 package com.davinci.pedometer_android.pedometer;
 
+import android.util.Log;
+
+
+import java.sql.Timestamp;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 public class StepDetector {
 
     private static final int ACCEL_RING_SIZE = 50;
     private static final int VEL_RING_SIZE = 10;
 
-    // change this threshold according to your sensitivity preferences
-    private static final float STEP_THRESHOLD = 50f;
-
-    private static final int STEP_DELAY_NS = 250000000;
 
     private int accelRingCounter = 0;
     private float[] accelRingX = new float[ACCEL_RING_SIZE];
     private float[] accelRingY = new float[ACCEL_RING_SIZE];
     private float[] accelRingZ = new float[ACCEL_RING_SIZE];
-    private int velRingCounter = 0;
-    private float[] velRing = new float[VEL_RING_SIZE];
-    private long lastStepTimeNs = 0;
-    private float oldVelocityEstimate = 0;
-
-    private StepListener listener;
-
-    public void registerListener(StepListener listener) {
-        this.listener = listener;
-    }
+    private double[] velocityFinal = new double[3];
+    private double[] distanceFinal = new double[3];
 
 
     public void updateAccel(long timeNs, float x, float y, float z) {
+
+        long timeInMillis = (new Date()).getTime() + (timeNs - System.nanoTime()) / 1000000L;
+        Timestamp stamp = new Timestamp(timeInMillis);
+        String dateFormat = new SimpleDateFormat("hh:mm:ss").format(new Date(stamp.getTime()));
+
+        int seconds = Integer.parseInt(new SimpleDateFormat("ss").format(new Date(stamp.getTime())));
+
         float[] currentAccel = new float[3];
         currentAccel[0] = x;
         currentAccel[1] = y;
         currentAccel[2] = z;
 
-        // First step is to update our guess of where the global z vector is.
         accelRingCounter++;
         accelRingX[accelRingCounter % ACCEL_RING_SIZE] = currentAccel[0];
         accelRingY[accelRingCounter % ACCEL_RING_SIZE] = currentAccel[1];
@@ -49,17 +50,32 @@ public class StepDetector {
         worldZ[1] = worldZ[1] / normalization_factor;
         worldZ[2] = worldZ[2] / normalization_factor;
 
-        float currentZ = SensorFilter.dot(worldZ, currentAccel) - normalization_factor;
-        velRingCounter++;
-        velRing[velRingCounter % VEL_RING_SIZE] = currentZ;
-
-        float velocityEstimate = SensorFilter.sum(velRing);
-
-        if (velocityEstimate > STEP_THRESHOLD && oldVelocityEstimate <= STEP_THRESHOLD
-                && (timeNs - lastStepTimeNs > STEP_DELAY_NS)) {
-            listener.step(timeNs);
-            lastStepTimeNs = timeNs;
+        // Acumulando muestras
+        for (int i = 0; i < worldZ.length; i++) {
+            worldZ[i] += worldZ[i];
         }
-        oldVelocityEstimate = velocityEstimate;
+
+        if (seconds % 2 == 0) { // Cada 2 segundos
+
+            Log.i("Tiempo", dateFormat);
+
+            for (int i = 0; i < velocityFinal.length; i++) {
+
+                velocityFinal[i] = 0.5 * (worldZ[i] / accelRingCounter);
+                Log.i("VectorVelocidad", velocityFinal[i] + "");
+
+
+                //Calcular la distancia
+                distanceFinal[i] = velocityFinal[i] * 2; // Velocidad * 2 segundos
+
+                velocityFinal[i] = 0;
+                worldZ[i] = 0;
+
+            }
+
+            // Enviar datos
+
+        }
     }
 }
+
