@@ -21,7 +21,7 @@ public class StepDetector {
     private double[] distanceFinal = new double[3];
 
 
-    public void updateAccel(long timeNs, float x, float y, float z) {
+    public double[] updateAccel(long timeNs, float x, float y, float z) {
 
         long timeInMillis = (new Date()).getTime() + (timeNs - System.nanoTime()) / 1000000L;
         Timestamp stamp = new Timestamp(timeInMillis);
@@ -57,25 +57,27 @@ public class StepDetector {
 
         if (seconds % 2 == 0) { // Cada 2 segundos
 
-            Log.i("Tiempo", dateFormat);
 
             for (int i = 0; i < velocityFinal.length; i++) {
 
                 velocityFinal[i] = 0.5 * (worldZ[i] / accelRingCounter);
-                Log.i("VectorVelocidad", velocityFinal[i] + "");
 
 
                 //Calcular la distancia
                 distanceFinal[i] = velocityFinal[i] * 2; // Velocidad * 2 segundos
 
-                velocityFinal[i] = 0;
-                worldZ[i] = 0;
 
             }
+            Log.i("Tiempo", dateFormat);
+            Log.i("Vector-velocidad", velocityFinal[0] + "," + velocityFinal[1] + velocityFinal[2]);
 
-            // Enviar datos
+            velocityFinal = new double[3];
+            worldZ = new float[3];
 
+            return distanceFinal;
         }
+        return distanceFinal;
+
     }
 }
 
