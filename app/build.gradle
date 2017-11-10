@@ -4,7 +4,7 @@ android {
     compileSdkVersion 26
     buildToolsVersion "26.0.1"
     defaultConfig {
-        applicationId "com.davinci.pedometer_android"
+        applicationId "com.davinci.edu.detector_robo"
         minSdkVersion 15
         targetSdkVersion 26
         versionCode 1
