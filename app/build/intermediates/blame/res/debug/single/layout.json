@@ -16,12 +16,12 @@
         "source": "C:\\Users\\emanu\\.android\\build-cache\\a2c6ddb2d305946f62982db3c6365709933935df\\output\\res\\layout\\abc_screen_toolbar.xml"
     },
     {
-        "merged": "C:\\Users\\emanu\\Repositorios\\detector-robo2\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_icon_group.xml",
-        "source": "C:\\Users\\emanu\\.android\\build-cache\\a2c6ddb2d305946f62982db3c6365709933935df\\output\\res\\layout\\notification_template_icon_group.xml"
-    },
-    {
         "merged": "C:\\Users\\emanu\\Repositorios\\detector-robo2\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_select_dialog_material.xml",
         "source": "C:\\Users\\emanu\\.android\\build-cache\\a2c6ddb2d305946f62982db3c6365709933935df\\output\\res\\layout\\abc_select_dialog_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\emanu\\Repositorios\\detector-robo2\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_icon_group.xml",
+        "source": "C:\\Users\\emanu\\.android\\build-cache\\a2c6ddb2d305946f62982db3c6365709933935df\\output\\res\\layout\\notification_template_icon_group.xml"
     },
     {
         "merged": "C:\\Users\\emanu\\Repositorios\\detector-robo2\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_bar_up_container.xml",
