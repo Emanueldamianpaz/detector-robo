@@ -125,9 +125,12 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
             e.printStackTrace();
         }
 /* TODO Falla el preview*/
-        camera.startPreview();
-        camera.takePicture(null, null, new PhotoHandler(getBaseContext()));
-
+//        camera.startPreview();
+        try {
+            camera.takePicture(null, null, new PhotoHandler(getBaseContext()));
+        } catch (RuntimeException e) {
+            e.printStackTrace();
+        }
     }
 
     @Override

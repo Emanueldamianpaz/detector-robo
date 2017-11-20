@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\emanu\Repositorios\detector-robo2\app\src\main\AndroidManifest.xml:2:1-32:12
+ADDED from C:\Users\emanu\Repositorios\detector-robo2\app\src\main\AndroidManifest.xml:2:1-31:12
 	package
 		ADDED from C:\Users\emanu\Repositorios\detector-robo2\app\src\main\AndroidManifest.xml:3:5-44
 		INJECTED from C:\Users\emanu\Repositorios\detector-robo2\app\src\main\AndroidManifest.xml
@@ -30,15 +30,11 @@ ADDED from C:\Users\emanu\Repositorios\detector-robo2\app\src\main\AndroidManife
 	android:name
 		ADDED from C:\Users\emanu\Repositorios\detector-robo2\app\src\main\AndroidManifest.xml:10:19-57
 uses-feature#android.hardware.camera.autofocus
-ADDED from C:\Users\emanu\Repositorios\detector-robo2\app\src\main\AndroidManifest.xml:12:5-70
+ADDED from C:\Users\emanu\Repositorios\detector-robo2\app\src\main\AndroidManifest.xml:11:5-70
 	android:name
-		ADDED from C:\Users\emanu\Repositorios\detector-robo2\app\src\main\AndroidManifest.xml:12:19-67
-uses-feature#android.hardware.camera.flash
-ADDED from C:\Users\emanu\Repositorios\detector-robo2\app\src\main\AndroidManifest.xml:13:5-66
-	android:name
-		ADDED from C:\Users\emanu\Repositorios\detector-robo2\app\src\main\AndroidManifest.xml:13:19-63
+		ADDED from C:\Users\emanu\Repositorios\detector-robo2\app\src\main\AndroidManifest.xml:11:19-67
 application
-ADDED from C:\Users\emanu\Repositorios\detector-robo2\app\src\main\AndroidManifest.xml:15:5-30:19
+ADDED from C:\Users\emanu\Repositorios\detector-robo2\app\src\main\AndroidManifest.xml:14:5-29:19
 MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\emanu\.android\build-cache\6e716d4d045c6b598ab4e37b95a747c8491357b4\output\AndroidManifest.xml:9:5-20
 MERGED from [com.frosquivel:magicaltakephoto:1.0] C:\Users\emanu\.android\build-cache\f8bdbcc3f20d856d2cdd6baa6b4e586afde39bed\output\AndroidManifest.xml:11:5-15:19
 MERGED from [com.android.support:appcompat-v7:26.0.0-alpha1] C:\Users\emanu\.android\build-cache\a2c6ddb2d305946f62982db3c6365709933935df\output\AndroidManifest.xml:29:5-20
@@ -51,31 +47,31 @@ MERGED from [com.android.support:animated-vector-drawable:26.0.0-alpha1] C:\User
 MERGED from [com.android.support:support-vector-drawable:26.0.0-alpha1] C:\Users\emanu\.android\build-cache\1ed54a3fb0606882f8f5c6d1c67e42fd9b45cd6d\output\AndroidManifest.xml:26:5-20
 MERGED from [com.android.support:support-compat:26.0.0-alpha1] C:\Users\emanu\.android\build-cache\851d09188bc8c622844c078fb490602d7ece1a2b\output\AndroidManifest.xml:29:5-20
 	android:label
-		ADDED from C:\Users\emanu\Repositorios\detector-robo2\app\src\main\AndroidManifest.xml:18:9-41
+		ADDED from C:\Users\emanu\Repositorios\detector-robo2\app\src\main\AndroidManifest.xml:17:9-41
 	android:supportsRtl
-		ADDED from C:\Users\emanu\Repositorios\detector-robo2\app\src\main\AndroidManifest.xml:20:9-35
+		ADDED from C:\Users\emanu\Repositorios\detector-robo2\app\src\main\AndroidManifest.xml:19:9-35
 	android:roundIcon
-		ADDED from C:\Users\emanu\Repositorios\detector-robo2\app\src\main\AndroidManifest.xml:19:9-54
+		ADDED from C:\Users\emanu\Repositorios\detector-robo2\app\src\main\AndroidManifest.xml:18:9-54
 	android:allowBackup
-		ADDED from C:\Users\emanu\Repositorios\detector-robo2\app\src\main\AndroidManifest.xml:16:9-35
+		ADDED from C:\Users\emanu\Repositorios\detector-robo2\app\src\main\AndroidManifest.xml:15:9-35
 	android:icon
-		ADDED from C:\Users\emanu\Repositorios\detector-robo2\app\src\main\AndroidManifest.xml:17:9-43
+		ADDED from C:\Users\emanu\Repositorios\detector-robo2\app\src\main\AndroidManifest.xml:16:9-43
 	android:theme
-		ADDED from C:\Users\emanu\Repositorios\detector-robo2\app\src\main\AndroidManifest.xml:21:9-40
+		ADDED from C:\Users\emanu\Repositorios\detector-robo2\app\src\main\AndroidManifest.xml:20:9-40
 activity#com.davinci.edu.detector_robo.MainActivity
-ADDED from C:\Users\emanu\Repositorios\detector-robo2\app\src\main\AndroidManifest.xml:23:9-29:20
+ADDED from C:\Users\emanu\Repositorios\detector-robo2\app\src\main\AndroidManifest.xml:22:9-28:20
 	android:name
-		ADDED from C:\Users\emanu\Repositorios\detector-robo2\app\src\main\AndroidManifest.xml:23:19-47
+		ADDED from C:\Users\emanu\Repositorios\detector-robo2\app\src\main\AndroidManifest.xml:22:19-47
 intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
-ADDED from C:\Users\emanu\Repositorios\detector-robo2\app\src\main\AndroidManifest.xml:24:13-28:29
+ADDED from C:\Users\emanu\Repositorios\detector-robo2\app\src\main\AndroidManifest.xml:23:13-27:29
 action#android.intent.action.MAIN
-ADDED from C:\Users\emanu\Repositorios\detector-robo2\app\src\main\AndroidManifest.xml:25:17-69
+ADDED from C:\Users\emanu\Repositorios\detector-robo2\app\src\main\AndroidManifest.xml:24:17-69
 	android:name
-		ADDED from C:\Users\emanu\Repositorios\detector-robo2\app\src\main\AndroidManifest.xml:25:25-66
+		ADDED from C:\Users\emanu\Repositorios\detector-robo2\app\src\main\AndroidManifest.xml:24:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\Users\emanu\Repositorios\detector-robo2\app\src\main\AndroidManifest.xml:27:17-77
+ADDED from C:\Users\emanu\Repositorios\detector-robo2\app\src\main\AndroidManifest.xml:26:17-77
 	android:name
-		ADDED from C:\Users\emanu\Repositorios\detector-robo2\app\src\main\AndroidManifest.xml:27:27-74
+		ADDED from C:\Users\emanu\Repositorios\detector-robo2\app\src\main\AndroidManifest.xml:26:27-74
 uses-sdk
 INJECTED from C:\Users\emanu\Repositorios\detector-robo2\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\emanu\.android\build-cache\6e716d4d045c6b598ab4e37b95a747c8491357b4\output\AndroidManifest.xml:5:5-7:41
