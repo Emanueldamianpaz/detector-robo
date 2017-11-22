@@ -13,12 +13,16 @@ import android.net.Uri;
 import android.os.Environment;
 import android.util.Log;
 
+import com.davinci.edu.detector_robo.gps.GPS_Location;
+
 public class PhotoHandler implements PictureCallback {
 
     private Context context;
+    private GPS_Location gpsLocation;
 
     public PhotoHandler(Context context) {
         this.context = context;
+        gpsLocation = new GPS_Location(context);
     }
 
     @Override
@@ -36,7 +40,7 @@ public class PhotoHandler implements PictureCallback {
 
             SimpleDateFormat dateFormat = new SimpleDateFormat("yyyymmddhhmmss");
             String date = dateFormat.format(new Date());
-            String photoFile = "Picture_" + date + ".jpg";
+            String photoFile = gpsLocation.getLocation() + "_" + date + ".jpg";
 
             String filename = pictureFileDir.getPath() + File.separator + photoFile;
 
